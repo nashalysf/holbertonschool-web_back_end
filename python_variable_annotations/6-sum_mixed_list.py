@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """ Basic Python Annotations """
-
-
 from typing import List
 
 
