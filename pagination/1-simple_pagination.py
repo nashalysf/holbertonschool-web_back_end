@@ -29,7 +29,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            pass
+        pass
 
     def index_range(page: int, page_size: int) -> Tuple[int, int]:
         """
@@ -45,7 +45,7 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Find the correct indexes to paginate the dataset \
-            correctly and return the appropriate page of the dataset 
+            correctly and return the appropriate page of the dataset
 
         Args:
             page (int, optional): _description_. Defaults to 1.
