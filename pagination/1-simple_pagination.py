@@ -28,18 +28,6 @@ class Server:
 
         return self.__dataset
 
-    def index_range(page: int, page_size: int) -> Tuple[int, int]:
-        """
-        Returns tuple size(start, end) for pagination parameters
-        """
-        start_index: int = 0
-        end_index: int = page * page_size
-
-        for i in range(page - 1):
-            start_index += page_size
-
-        return (start_index, end_index)
-
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Find the correct indexes to paginate the dataset \
             correctly and return the appropriate page of the dataset
@@ -56,3 +44,15 @@ class Server:
         if end > len(dataset):
             return []
         return [list(dataset[row]) for row in range(start, end)]
+
+    def index_range(page: int, page_size: int) -> Tuple[int, int]:
+        """
+        Returns tuple size(start, end) for pagination parameters
+        """
+        start_index: int = 0
+        end_index: int = page * page_size
+
+        for i in range(page - 1):
+            start_index += page_size
+
+        return (start_index, end_index)
