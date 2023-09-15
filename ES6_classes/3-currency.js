@@ -9,12 +9,12 @@ export default class Currency {
 
   /* getter name */
   get name() {
-    return this._name
+    return this._name;
   }
 
   /* getter code */
   get code() {
-    return this._code
+    return this._code;
   }
 
   /* setter name */
