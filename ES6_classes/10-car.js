@@ -1,8 +1,8 @@
 export default class Car {
   constructor(brand, motor, color) {
-    if(typeof (brand) !== 'string') throw TypeError('Brand must be a string');
-    if(typeof (motor) !== 'string') throw TypeError('Brand must be a string');
-    if(typeof (color) !== 'string') throw TypeError('Brand must be a string');
+    if (typeof (brand) !== 'string') throw TypeError('Brand must be a string');
+    if (typeof (motor) !== 'string') throw TypeError('Motor must be a string');
+    if (typeof (color) !== 'string') throw TypeError('Color must be a string');
 
     this._brand = brand;
     this._motor = motor;
@@ -14,7 +14,7 @@ export default class Car {
   }
 
   cloneCar() {
-    const newCar = this.constructor[Symbol.species];
-    return new newCar(this._brand, this._motor, this._color);
+    const Car = this.constructor[Symbol.species];
+    return new Car(this._brand, this._motor, this._color);
   }
 }
