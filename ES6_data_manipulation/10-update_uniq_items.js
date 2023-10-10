@@ -5,7 +5,7 @@ export default function updateUniqueItems(_map) {
 
   for (const [key] of _map) {
     if (_map.get(key) === 1) {
-        _map.set(key, 100);
+      _map.set(key, 100);
     }
   }
 
